@@ -1,4 +1,4 @@
-question_bank = [
+question_data = [
     {"question": "Snail blood is blue.", "answer": "True"},
     {"question": "An octopus has four hearts.", "answer": "False"},
     {"question": "Tomatoes were once banned in France.", "answer": "True"},
@@ -20,6 +20,3 @@ question_bank = [
     {"question": "The Greenland shark is the world's longest-living animal.", "answer": "True"},
     {"question": "The first video game was Pong.", "answer": "False"},
 ]
-
-for question in question_bank:
-    print(question["answer"])
