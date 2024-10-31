@@ -10,4 +10,5 @@ for question in question_data:
 
 check = QuizBrain(question_bank)
 
-check2 = check.get_question_number()
+for question in question_bank:
+    check.get_question_number()
