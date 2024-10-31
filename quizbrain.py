@@ -7,7 +7,7 @@ class QuizBrain:
         self.answers_correct = 0
 
     def remaining_questions(self):
-        if self.question_number > len(self.question_list): 
+        if self.question_number >= len(self.question_list): 
             return False
         else: 
             return True
@@ -30,5 +30,5 @@ class QuizBrain:
     
     def final_score(self, number_correct, number_of_questions):
         print("You have completed the quiz")
-        print(f"you final score was {number_correct}/{number_of_questions}")
+        print(f"Your final score was {number_correct}/{number_of_questions}")
 
