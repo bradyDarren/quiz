@@ -20,12 +20,12 @@ class QuizInterface:
         # False Button
         self.false_img = PhotoImage(file='images/false.png')
         self.false_button = Button(image=self.false_img)
-        self.false_button.grid(column=1, row=3)
+        self.false_button.grid(column=1, row=3, pady=20)
 
         # True Button
         self.true_img = PhotoImage(file='images/true.png')
         self.true_button = Button(image=self.true_img)
-        self.true_button.grid(column=0, row=3)
+        self.true_button.grid(column=0, row=3, pady=20)
 
 
         self.window.mainloop()
