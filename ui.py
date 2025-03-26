@@ -14,7 +14,7 @@ class QuizInterface:
         self.question = self.canvas.create_text(150, 125, text="Question",font=('Ariel',20, 'italic'), fill='black')
         self.canvas.grid(column=0, row=1, columnspan=2)
 
-        self.score = Label(text="ABC")
+        self.score = Label(text="ABC", bg=THEME_COLOR, pady=20)
         self.score.grid(column=1, row=0)
 
         # False Button
