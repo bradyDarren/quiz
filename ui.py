@@ -11,21 +11,27 @@ class QuizInterface:
 
 
         self.canvas = Canvas(width=300, height=250, highlightthickness=0, bg='white')
-        self.question = self.canvas.create_text(150, 125, text="Question",font=('Ariel',20, 'italic'), fill='black')
-        self.canvas.grid(column=0, row=1, columnspan=2)
+        self.question = self.canvas.create_text(
+            150,
+            125,
+            text="Question",
+            font=('Ariel',20, 'italic'),
+            fill='black'
+        )
+        self.canvas.grid(column=0, row=1, columnspan=2, pady=50)
 
-        self.score = Label(text="ABC", bg=THEME_COLOR, pady=20)
+        self.score = Label(text="ABC", bg=THEME_COLOR, pady=20, fg='white')
         self.score.grid(column=1, row=0)
 
         # False Button
         self.false_img = PhotoImage(file='images/false.png')
         self.false_button = Button(image=self.false_img)
-        self.false_button.grid(column=1, row=3, pady=20)
+        self.false_button.grid(column=1, row=3)
 
         # True Button
         self.true_img = PhotoImage(file='images/true.png')
         self.true_button = Button(image=self.true_img)
-        self.true_button.grid(column=0, row=3, pady=20)
+        self.true_button.grid(column=0, row=3)
 
 
         self.window.mainloop()
