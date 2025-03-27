@@ -16,6 +16,8 @@ class QuizInterface:
         self.question = self.canvas.create_text(
             150,
             125,
+            width=280, # by setting the width to be less than the window it will automatically
+            # wrap the text
             text="Question",
             font=('Ariel',20, 'italic'),
             fill='black'
@@ -27,12 +29,12 @@ class QuizInterface:
 
         # False Button
         self.false_img = PhotoImage(file='images/false.png')
-        self.false_button = Button(image=self.false_img)
+        self.false_button = Button(image=self.false_img, command=self.false_button)
         self.false_button.grid(column=1, row=3)
 
         # True Button
         self.true_img = PhotoImage(file='images/true.png')
-        self.true_button = Button(image=self.true_img)
+        self.true_button = Button(image=self.true_img, command=self.true_button)
         self.true_button.grid(column=0, row=3)
 
         self.get_question()
@@ -42,5 +44,15 @@ class QuizInterface:
     def get_question(self): 
         q_text = self.quiz.get_next_question()
         self.canvas.itemconfig(self.question, text = q_text)
+
+    def true_button(self):
+        answer = 'True'
+        self.quiz.check_answer(answer)
+    
+    def false_button(self):
+        answer = 'False'
+        self.quiz.check_answer(answer)
+
+
 
 
