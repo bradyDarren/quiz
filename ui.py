@@ -46,12 +46,10 @@ class QuizInterface:
         self.canvas.itemconfig(self.question, text = q_text)
 
     def true_button(self):
-        answer = 'True'
-        self.quiz.check_answer(answer)
+        self.quiz.check_answer('True')
     
     def false_button(self):
-        answer = 'False'
-        self.quiz.check_answer(answer)
+        self.quiz.check_answer('False')
 
 
 
