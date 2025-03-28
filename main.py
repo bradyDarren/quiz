@@ -11,7 +11,3 @@ for question in question_data:
 
 quiz = QuizBrain(question_bank)
 quiz_ui = QuizInterface(quiz)
-
-# while quiz.remaining_questions():
-#     quiz.get_next_question()
-quiz.final_score(quiz.answers_correct, quiz.question_number)
