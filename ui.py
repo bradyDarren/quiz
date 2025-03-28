@@ -24,7 +24,7 @@ class QuizInterface:
         )
         self.canvas.grid(column=0, row=1, columnspan=2, pady=50)
 
-        self.score = Label(text="ABC", bg=THEME_COLOR, pady=20, fg='white')
+        self.score = Label(text="Score: 0", bg=THEME_COLOR, pady=20, fg='white')
         self.score.grid(column=1, row=0)
 
         # False Button
@@ -42,6 +42,7 @@ class QuizInterface:
         self.window.mainloop()
 
     def get_question(self): 
+        self.score.config(text=f"Score:{self.quiz.answers_correct}")
         q_text = self.quiz.get_next_question()
         self.canvas.itemconfig(self.question, text = q_text)
         self.canvas.config(bg='white')
@@ -59,8 +60,3 @@ class QuizInterface:
             self.canvas.config(bg='red')
         
         self.window.after(1000,self.get_question)
-    
-    def score(self):
-        pass
-
-
