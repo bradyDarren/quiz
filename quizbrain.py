@@ -25,12 +25,9 @@ class QuizBrain:
         correct_answer = self.current_question.answer
         if user_answer.lower() == correct_answer.lower():
             self.answers_correct += 1
-            print("You got it correct.")
-            # return f'Score:{self.answers_correct}'
+            return True
         else: 
-            print("Sorry, you are incorrect.")
-        print(f"Your current score is: {self.answers_correct}/{self.question_number}.")
-        print("\n")
+            return False
     
     def final_score(self, number_correct, number_of_questions):
         print("You have completed the quiz")
