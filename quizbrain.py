@@ -28,8 +28,4 @@ class QuizBrain:
             return True
         else: 
             return False
-    
-    def final_score(self, number_correct, number_of_questions):
-        print("You have completed the quiz")
-        print(f"Your final score was {number_correct}/{number_of_questions}")
 
